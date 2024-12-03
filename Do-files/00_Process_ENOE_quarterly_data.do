@@ -30,36 +30,19 @@ frame reset
 * User 1: Israel Osorio Rodarte
 	if c(username)=="israel"|c(username)=="Israel" {
 		global path "/Users/`c(username)'/OneDrive/Data/GLD/MEX copy"
-		global panjiva "/Users/`c(username)'/OneDrive/Data/Panjiva/Exports Shipper Report"
-		global temp "$path/PANEL/DATA/temp"
-		global paper "/Users/`c(username)'/OneDrive/Authors Workshop/Draft and notes/graphs"
-	}
-
-* User 2: Eugenia Suarez Moran (WB406475)
-	if "`c(os)'"=="Windows" & "`c(username)'"=="wb406475" {
-		global path "C:/Users/wb406475/OneDrive/Data/GLD/MEX copy"
-		global panjiva "C:/Users/wb406475/OneDrive/Data/Panjiva/Exports Shipper Report"
 		global temp "$path/PANEL/DATA/temp"
 	}
 
-* User 3: WB308767
+* User 2: Israel Osorio Rodarte (WB308767)
 	if c(username)=="WB308767" & c(hostname)=="WBGXDP0663" {
 		global path "C:/Users/`c(username)'/OneDrive/Data/GLD/MEX copy"
-		global panjiva "C:/Users/`c(username)'/OneDrive/Data/Panjiva/Exports Shipper Report"
 		global temp "$path/PANEL/DATA/temp"
-		global paper "/Users/`c(username)'/OneDrive/Authors Workshop/Draft and notes/graphs"
 	}	
 	
 	
 local part0 	"" // Re-run GLD harmonization
 local part1 	"" // append panel data
 local part2 	"" // Panel of Workers Quarterly
-local part21 	"" // Statistics by city
-local part3 	"" // probabilities
-local part31	""
-local part32	""
-
-local mygvarlist "occupjobs"	// informal
 
 local iniyear = 2005
 local finyear = 2023
