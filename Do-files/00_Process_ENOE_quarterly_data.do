@@ -396,7 +396,7 @@ if "`part1'"=="yes" {
 	
 	order year-int_month quarter panel pid_p
 	
-	save "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULL.dta", replace	
+	save "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULLSAMPLE.dta", replace	
 	frame reset	
 
 }
@@ -407,7 +407,7 @@ if "`part1'"=="yes" {
 if "`part2'"=="yes" {
 
 	* Create a balance database
-	use pid_p n_ent q_panel tipo if q_panel==1 using "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULL.dta", clear
+	use pid_p n_ent q_panel tipo if q_panel==1 using "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULLSAMPLE.dta", clear
 		tab tipo, m
 		drop tipo
 		* duplicates report 
@@ -435,7 +435,7 @@ if "`part2'"=="yes" {
 		tempfile balanced
 		save `balanced', replace
 		
-	use "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULL.dta", clear
+	use "$path/PANEL/DATA/MEX_2005_2023_ENOE_V01_M_V06_A_GLD_FULLSAMPLE.dta", clear
 
 	count /*24,246,404*/
 	
