@@ -29,13 +29,13 @@ frame reset
 
 * User 1: Israel Osorio Rodarte
 	if c(username)=="israel"|c(username)=="Israel" {
-		global path "/Users/`c(username)'/OneDrive/Data/GLD/MEX copy"
+		global path "/Users/`c(username)'/Data/GLD/WB-MEX-Poverty-Assessment-2024-ENOE"
 		global temp "$path/PANEL/DATA/temp"
 	}
 
 * User 2: Israel Osorio Rodarte (WB308767)
 	if c(username)=="WB308767" & c(hostname)=="WBGXDP0663" {
-		global path "C:/Users/`c(username)'/OneDrive/Data/GLD/MEX copy"
+		global path "C:/Users/`c(username)'/Data/GLD/WB-MEX-Poverty-Assessment-2024-ENOE"
 		global temp "$path/PANEL/DATA/temp"
 	}	
 	
